@@ -1,0 +1,22 @@
+<ng-container ngSwitch="settings.template">
+  <ng-container *ngSwitchDefault="">
+    <div class="container-fluid">
+      <div *ngFor="let item of taplist" class="row" [ngStyle]="{'color':settings.colors[item.beerColor]}">
+        <div class="col-1 h1">{{item.tapNumber}}</div>
+        <div class="col-5 text-truncate h3">{{item.beerName}} - {{item.breweryName}}</div>
+        <div class="col-1 h2"><span *ngIf="item.abv">{{item.abv}}&deg;</span></div>
+        <div class="col-1 h2">{{item.bitterness}}</div>
+        <div class="col-1 h2"><span class="h2" *ngIf="item.gravity">{{item.gravity}}%</span></div>
+        <div class="col-3">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col" *ngFor="let key of objectKeys(settings.prices)">
+                <span *ngIf="item.prices[key]"><span class="h2">{{item.prices[key]}}</span><sub>/&nbsp;{{settings.prices[key]}}</sub></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>

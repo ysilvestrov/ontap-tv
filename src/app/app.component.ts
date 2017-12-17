@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {ITaplistItem} from './taplist';
+import {TaplistService} from './taplist.service';
+import {SettingsService} from './settings.service';
+import {ITaplistSettings} from './taplist-settings';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  constructor() {
+  }
 }
