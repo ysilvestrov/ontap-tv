@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --target=production --aot",
+    "-postinstall": "ng build --target=production --aot",
+    "doinstall": "ng build --target=production --aot",
     "update": "ng update --style scss --prefix xc",
     "start": "node server.js",
     "run": "ng build && node server.js"
