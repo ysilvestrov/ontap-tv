@@ -5,7 +5,7 @@
         <div class="col-1 h1">{{item.tapNumber}}</div>
         <div class="col-5 text-truncate h3">{{item.beerName}} - {{item.breweryName}}</div>
         <div class="col-1 h2"><span *ngIf="item.abv">{{item.abv}}&deg;</span></div>
-        <div class="col-1 h2">{{item.bitterness}}</div>
+        <div class="col-1 h2"><span  *ngIf="item.bitterness">{{item.bitterness}}</span></div>
         <div class="col-1 h2"><span class="h2" *ngIf="item.gravity">{{item.gravity}}%</span></div>
         <div class="col-3">
           <div class="container-fluid">
